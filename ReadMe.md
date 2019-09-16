@@ -17,7 +17,7 @@ Additional information on this testing can be viewed on an available [Overleaf D
 
 Information on downloading and installing the relevant software can be found in the [Overleaf Document](https://www.overleaf.com/read/cnbzpsmbdbqp).
 
-WThese scripts assume you can call the executables that you are testing. If you are running this script on the HPC filexfer node where you do not have root privileges, you have two options. 
+These scripts assume you can call the executables that you are testing. If you are running this script on the HPC filexfer node where you do not have root privileges, you have two options. 
   1) You can alter the execution commands to include the path to the executable
   2) You can add the location of the executable to your system's PATH variable. To do this, use the BASH command:
   ```
