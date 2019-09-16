@@ -23,7 +23,7 @@ These scripts assume you can call the executables that you are testing. If you a
   ```
   export PATH=$PATH:/path/to/executable/directory
   ```
-  This only alters the PATH variable for the given session. If you would like to make this a permanent change to your PATH variable, you may add it to your bashrc file. On HPC, your bashrc file is located in your home directory. First open the file using ``` vi ~/.bashrc```, then use the command ```shift A``` to edit the file. Go to the last blank line and write 
+  This only alters the PATH variable for the given session. If you would like to make this a permanent change to your PATH variable, you may add it to your bashrc file. On HPC, your bashrc file is located in your home directory. First open the file using ``` vi ~/.bashrc```, then use the command ```shift A``` to edit and add the line 
   ```
   export PATH=$PATH:/path/to/executable/directory
   ```
