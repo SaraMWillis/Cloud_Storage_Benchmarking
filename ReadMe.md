@@ -11,4 +11,4 @@ The transfer programs that have scripts currently available or are soon-to-be av
 * cyberduck
 * gdrive
 
-Additional information on this testing can be viewed on an available [Overleaf Document](https://www.overleaf.com/read/cnbzpsmbdbqp) which is currently a work-in-progress.
+Additional information on this testing can be viewed on an available [Overleaf Document](https://www.overleaf.com/read/cnbzpsmbdbqp) which is currently a work-in-progress and so may contain unfinished thoughts and other unsightly notes.
