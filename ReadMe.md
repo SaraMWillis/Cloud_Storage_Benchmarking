@@ -1,6 +1,6 @@
 # Google Drive Speed Test Scripts
 
-### About
+## About
 
 This repository contains all the scripts used to test upload/download speeds when transferring files to/from Google Drive.
 
@@ -29,3 +29,11 @@ If you do decide to make the change permanent and want to edit your .bashrc file
   4. Exit editing using ```shift :``` 
   5. Type ```wq``` to save and exit.
 
+
+## Programs Used
+
+* Gdrive : https://github.com/gdrive-org/gdrive
+* Rclone : https://github.com/rclone/rclone
+* Cyberduck CLI : https://duck.sh/
+* Cyberduck GUI : https://cyberduck.io/
+* Globus : https://www.globus.org/
