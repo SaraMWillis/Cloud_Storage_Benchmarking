@@ -16,15 +16,16 @@ The tests can be performed four ways:
 4) Google Drive      --> HPC
 
 The output from these tests is saved as a csv file of the form "Rclone_[source]_to_[destination].csv" and 
-will be automatically formatted for the user for ease-of-use.
+will be automatically formatted.
 
 Dependencies
 ------------
 
-The user will need to have rclone set up on the machine they are running these benchmarking tests. 
+The user will need to have rclone set up on the machine where they are running these benchmarking tests. 
 
-Download instructions are available on a shared overleaf document which summarizes the benchmarking 
+Download instructions are available on a shared overleaf document which summarizes the
 tests that have been run with this script as well as others in this repository: 
+
 https://www.overleaf.com/read/cnbzpsmbdbqp
 
 ** When running this script on HPC, use the filexfer node and do not use the login nodes! **
@@ -40,11 +41,11 @@ You may access the filexfer node using the standard command: ssh NetID@filexfer.
 
 '''
 This is the only section that needs to edited by the user to customize the program
-for their specific use
+for their use.
 
 ======================================================================================================
-All included options in User Options are specific to my machine and are included as examples. You will 
-want to replace my specific commands with those specific to you.
+All User Options are specific to my machine and are included as examples. You will 
+want to replace my commands with those specific to you.
 ======================================================================================================
 
 '''
