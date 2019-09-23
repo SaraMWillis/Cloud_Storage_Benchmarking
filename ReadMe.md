@@ -17,17 +17,17 @@ These scripts assume you can call the executables that you are testing. If you a
   1) You can alter the execution commands to include the path to the executable
   2) You can add the location of the executable to your system's PATH variable.
 
-If you choose to alter your PATH variable, note that doing so on the command line only changes your PATH for the given session. If you would like to make this a permanent change to your PATH variable, you may add it to your bashrc file. Regardless of how you choose to change your PATH variable, the command is the same:
+If you choose to alter your PATH variable, note that doing so on the command line will only change it for the given session. If you would like to make this permanent, you'll need to edit your .bashrc file. Regardless of how you choose to change your PATH variable, the command is the same:
   ```
   export PATH=$PATH:/path/to/executable/directory
   ```
-If you do decide to make the change permanent and want to edit your .bashrc file:
+If you decide to make the change permanent:
 
-  1. On HPC, your bashrc file is located in your home directory. Open the file using ``` vi ~/.bashrc```
+  1. On HPC, open the file using ``` vi ~/.bashrc```
   2. Use the command ```shift A``` to edit 
   3. Add the command to edit PATH (see above) to a blank line
   4. Exit editing using ```shift :``` 
-  5. Type ```wq``` to save and exit.
+  5. Type ```wq``` and then press ```Enter``` to save and exit.
 
 
 ## Programs Used
