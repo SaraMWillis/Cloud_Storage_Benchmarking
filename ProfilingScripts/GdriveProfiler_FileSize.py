@@ -69,12 +69,12 @@ host_machine = 'Personal Computer'
 # can be created for users in the output. The file size must be specified in the format:
 # [Prefix, i.e. B, M, G,...][size value], for example 10MB
 
-local_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
+local_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2.txt']
 
 # When transferring files on HPC, it's recommended you store your test files in extra since
 # your home directory has limited storage space and some of the larger files may cause
 # errors if you exceed your quota.
-hpc_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
+hpc_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2.txt']
 
 
 number_of_tests_per_filesize = 5
