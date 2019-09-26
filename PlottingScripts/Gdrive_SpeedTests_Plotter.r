@@ -24,7 +24,7 @@ data_speeds <- read.csv(paste('~/Desktop/ProfilingTest/Gdrive/Profiling_Scripts/
 # Keeps R from automatically ordering the x-axis, which it will attempt to alphabetize, which messes the whole thing up
 data_speeds$FileSize <-with(data_speeds,factor(FileSize,levels=unique(FileSize)))
 
-# Splits the data frame so it can be recombined into format that can be more easily plotted
+# Splits the data frame so it can be recombined into a format that can be more easily plotted
 ProfiledSpeeds <- data.frame(data_speeds$ProfileSpeed_Mean,data_speeds$ProfileSpeed_SE,data_speeds$FileSize,'Profiled Speed')
 names(ProfiledSpeeds) <- c("MeanSpeed",'StandardError','FileSize','Estimator')
 gdriveSpeeds <- data.frame(data_speeds$GdriveEstimate_Mean,data_speeds$GdriveEstimate_SE,data_speeds$FileSize,'Gdrive Speed')
@@ -33,7 +33,7 @@ names(gdriveSpeeds) <- c("MeanSpeed",'StandardError','FileSize','Estimator')
 # Binds the smaller dataframes into one large one
 CombinedDataFrame <- rbind(ProfiledSpeeds,gdriveSpeeds)
 
-#Changes where the legened is and whether to plot is zoomed or not based on the max data point
+# Plots the data points. if/else statements change the formatting of the plot based on the max data point
 ggplot(CombinedDataFrame, aes(color=Estimator)) + 
   geom_point(aes(x=FileSize,y=MeanSpeed), size=8,alpha=1)+
   geom_errorbar(aes(x=FileSize,ymin=MeanSpeed-StandardError,ymax=MeanSpeed+StandardError),width=.05)+
