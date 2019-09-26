@@ -66,11 +66,11 @@ host_machine= 'Personal Computer'
 # either transfer them there or run the upload tests first.
 
 # The dummy files must have their paths specified
-local_file_names = ['/Users/sarawillis/Desktop/TempFileRepo/Temp_1M_globus.txt','/Users/sarawillis/Desktop/TempFileRepo/Temp_10M_globus.txt','/Users/sarawillis/Desktop/TempFileRepo/Temp_100M_globus.txt','/Users/sarawillis/Desktop/TempFileRepo/Temp_1G_globus.txt','/Users/sarawillis/Desktop/TempFileRepo/Temp_10G_globus.txt','/Users/sarawillis/Desktop/TempFileRepo/Temp_100G_globus.txt']
+local_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
 
 # The dummy files on HPC should be stored in extra given the space restrictions in their
 # home directory. The files need their path specified.
-hpc_file_names = ['/extra/sarawillis/Temp_1M_globus.txt','/extra/sarawillis/TempFileRepo/Temp_10M_globus.txt','/extra/sarawillis/Temp_100M_globus.txt','/extra/sarawillis/Temp_1G_globus.txt','/extra/sarawillis/Temp_10G_globus.txt','/extra/sarawillis/Temp_100G_globus.txt']
+hpc_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
 
 # Each filesize will be uploaded multiple times to get a good sampling.
 number_of_tests_per_filesize = 5
@@ -82,7 +82,9 @@ Direction = 'Download'
 
 # Below you need to use the profile name you gave to your Google Drive connector during
 # the rclone setup process
+
 # ** The options below are specific to my account and should be changed! **
+
 # PC  : MyGoogleDrive 
 # HPC : mygoogledrive
 GoogleDriveRemote = 'MyGoogleDrive'
