@@ -46,7 +46,7 @@ ggplot(CombinedDataFrame, aes(color=Estimator)) +
   if(max(CombinedDataFrame$MeanSpeed) > 85){
   facet_zoom(ylim=c(0,85)) 
   } else {
-  ylim(0,85)#, c(.95,0.05), c(.2,.87)
+  ylim(0,85)
   }
 
 # Saves the file as a .png in the working directory specified at the beginning of this script
