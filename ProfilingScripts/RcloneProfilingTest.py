@@ -66,11 +66,11 @@ host_machine= 'Personal Computer'
 # either transfer them there or run the upload tests first.
 
 # The dummy files must have their paths specified
-local_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
+local_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2.txt']
 
 # The dummy files on HPC should be stored in extra given the space restrictions in their
 # home directory. The files need their path specified.
-hpc_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2/.txt']
+hpc_file_names = ['/path/to/file/filename_1.txt','/path/to/file/filename_2.txt']
 
 # Each filesize will be uploaded multiple times to get a good sampling.
 number_of_tests_per_filesize = 5
