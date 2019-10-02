@@ -4,7 +4,7 @@
 
 This repository contains all the scripts used to test upload/download speeds when transferring files to/from various cloud sites.
 
-## Current Cloud Storage Options
+## Current Tested Cloud Storage Options
  * Google Drive
  * AWS S3
 
