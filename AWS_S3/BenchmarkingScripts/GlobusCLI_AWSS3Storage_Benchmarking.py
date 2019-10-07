@@ -1,4 +1,4 @@
-import os, sys, csv, cProfile, io, pstats, re
+import os, sys, csv, cProfile, io, pstats, re, datetime
 
 '''
 
@@ -27,8 +27,14 @@ This script outputs a csv file where it prints the file sizes of the transfers a
 #   1) HPC
 #   2) Personal Computer
 #   3) AWS
-Source                           = 'Personal Computer'
+#   4) Gdrive
+Source                           = 'HPC'
 Destination                      = 'AWS'
+
+
+# Globus, by default, checks the integrity of files after they've been transferred. This can
+# greatly slow down the whole process. This option allows the checksum process to be turned off.
+Checksum = False
 
 
 # Globus Keys -- These can either be found in the Globus site: https://app.globus.org/endpoints
@@ -40,15 +46,17 @@ Destination                      = 'AWS'
 personal_computer_key            = ''
 HPC_filexfer_node_key            = ''
 AWS_S3_key                       = ''
+Gdrive_key                       = ''
 
 # Paths within endpoints where files should be transferred from/to
 personal_computer_file_directory = ''
 hpc_file_directory               = ''
 AWS_S3_home_directory            = ''
+Gdrive_file_directory            = ''
 
 
 # Names of dummy files used for transfer benchmarking
-filenames                        = ['Temp_1M_Globus.txt','Temp_10M_Globus.txt','Temp_100M_Globus.txt','Temp_1G_Globus.txt','Temp_10G_Globus.txt','Temp_100G_Globus.txt']
+filenames                        = ['Example_filename_1','Example_filename2']
 
 number_of_transfers_per_file     = 5
 
@@ -130,6 +138,11 @@ def DeleteDestinationFile(destination_path,filename):
 #                               Program Executes Below                              #
 #####################################################################################
 
+start_time = datetime.datetime.now()
+print('Program Executing\nCurrent Time: %s'%start_time)
+sys.stdout.flush()
+
+
 # Used to convert all speeds to MB/s for uniformity in results
 prefix_dictionary = {'B':1,'K':float(1e3), 'M':float(1e6),'G':float(1e9)}
 
@@ -157,6 +170,8 @@ destination_path = transfer_options[Destination]['Path']
 
 # The output file will be in csv format with the transfer speeds and the file sizes
 output_filename = 'GlobusBenchmarkingTest_%s_to_%s.csv'%(Source.replace(' ',''),Destination.replace(' ',''))
+if Checksum == False:
+    output_filename.replace('.csv','_NoChecksum.csv')
 
 # We write the heading and close the file. This action will overwrite any previous
 # files existing in the working directory with the same name
@@ -181,7 +196,10 @@ for filename in filenames:
         DeleteDestinationFile(destination_path,filename)
 
         # Initiates a transfer and pulls the job ID
-        os.system('globus transfer '+source_path+filename+' '+destination_path+filename + ">"+globus_output_file)
+        if Checksum == False:
+            os.system('globus transfer --no-verify-checksum '+source_path+filename+' '+destination_path+filename + ">"+globus_output_file)
+        else:
+            os.system('globus transfer '+source_path+filename+' '+destination_path+filename + ">"+globus_output_file)
         task_ID = ExtractGlobusOutput(globus_output_file, 'Task ID')
 
         # Waits while the transfer is performed so jobs don't dogpile and we can
@@ -204,3 +222,6 @@ if os.path.exists(globus_output_file) == True:
     os.remove(globus_output_file)
 if os.path.exists(globus_summary_name) == True:
         os.remove(globus_summary_name)
+
+print('Program Complete\nTime Taken: %s'%(datetime.datetime.now()-start_time))
+sys.stdout.flush()
