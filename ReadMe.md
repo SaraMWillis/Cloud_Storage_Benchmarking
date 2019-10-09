@@ -24,7 +24,7 @@ The available scripts are designed so that the user can either run them from the
 
 ### Programs Used
 
-| Program       | Link                                 |
+| Program       | Source                               |
 |---------------|--------------------------------------|
 | Gdrive        | https://github.com/gdrive-org/gdrive |
 | Rclone        | https://github.com/rclone/rclone     |
