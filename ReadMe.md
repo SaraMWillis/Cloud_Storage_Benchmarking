@@ -24,8 +24,9 @@ The available scripts are designed so that the user can either run them from the
 
 ### Programs Used
 
-| Gdrive        | https://github.com/gdrive-org/gdrive |
+| Program       | Link                                 |
 |---------------|--------------------------------------|
+| Gdrive        | https://github.com/gdrive-org/gdrive |
 | Rclone        | https://github.com/rclone/rclone     |
 | Cyberduck CLI | https://duck.sh/                     |
 | Cyberduck GUI | https://cyberduck.io/                |
