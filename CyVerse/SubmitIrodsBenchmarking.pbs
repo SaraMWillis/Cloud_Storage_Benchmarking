@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -W group_list=sarawillis
+#PBS -q standard
+#PBS -l select=1:ncpus=6:mem=36gb:pcmem=6gb
+#PBS -l walltime=10:00:00
+#PBS -l cput=60:00:00
+
+module load python
+cd ~/cyverse_irods_transfer_benchmarking
+python Cyverse_irods_Benchmarking.py
