@@ -32,9 +32,8 @@ The available scripts are designed so that the user can either run them from the
 
 ## AWS S3
 
-The most recent cloud storage platform to be tested is Amazon's AWS S3. We have a limited trial for the service and so testing was limited. Specifically, Globus's CLI was used in a script to automate transfers over a period of about a week. That script has been included in this repository along with the output csv files, R plotting script, and output plots. The available script has been updated to include a Google Drive connection (a fairly trivial change) and may be added to the Google Drive section in the future.
+We had a limited trial for the service and so testing was not able to be carried out to completion. Globus's CLI was used in a script to automate transfers over a period of about a week. That script has been included in this repository along with the output csv files, R plotting script, and output plots. The available script has been updated to include a Google Drive connection (a fairly trivial change) and may be added to the Google Drive section in the future.
 
-## Cyverse
+## CyVerse
 
-**To be updated soon. Tests currently running using irods**
-
+Files were transferred between HPC and CyVerse using iRODS. As in the tests above, six individual dummy files were transferred five times. The means and standard errors were then found for the transfer speeds for each test and plotted in R. 
