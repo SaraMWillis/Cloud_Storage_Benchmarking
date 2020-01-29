@@ -55,10 +55,6 @@ want to replace my commands with those specific to you.
 
 '''
 
-# Which version of python is being run determines some slight variations in the code.
-# Options are '3' and '2'
-python_version = '3'
-
 # Either 'Personal Computer' or 'HPC'
 host_machine = 'Personal Computer'
 
@@ -289,6 +285,9 @@ def RemoveFileFromGdrive(filename):
 #####################################################################################
 #                                 Program Executes                                  #
 #####################################################################################
+
+# Detects python version
+python_version = str(sys.version_info[0])
 
 # How an output CSV file is read is dependent on the python version. At least, if the
 # correct read option is not specified, python will run but complain which clutters
