@@ -5,7 +5,7 @@
 
 ## About
 
-This repository contains all the scripts, output CSV files, and figures used and generated from testing upload/download speeds  to/from various cloud storage repositories. A comprehensive summary of all results is included in the available PDF Tiered_Storage_Benchmarking.pdf _(coming soon)_. A second file will be included in the near future that documents setting up all the required software on HPC.
+This repository contains all the scripts, output CSV files, and figures used and generated from testing upload/download speeds  to/from various cloud storage repositories. A comprehensive summary of all results is included in the available PDF Tiered_Storage_Benchmarking.pdf. A second file, Tiered_Storage_Installation_Instructions.pdf, documents setting up all the required software on HPC.
 
 ## Current Tested Tiered Storage Options
  * Google Drive
