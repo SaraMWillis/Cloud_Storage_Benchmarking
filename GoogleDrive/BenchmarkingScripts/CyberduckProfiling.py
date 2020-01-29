@@ -23,10 +23,6 @@ This script outputs a csv file where it prints the file sizes of the transfers a
 #                                   User Options                                    #
 #####################################################################################
 
-# The file transfer node only runs python 2, which changes some commands slightly from python 3, which is
-# the version I run on my work computer.
-python_version = '3'
-
 NetID = ''
 
 # Choose either Personal Computer or HPC. This will allow the program to find the correct path to the dummy
@@ -140,6 +136,9 @@ def RunProfilingTest(loadFile):
 #####################################################################################
 #                                 Program Executes                                  #
 #####################################################################################
+
+# Detects python version
+python_version = str(sys.version_info[0])
 
 # Which computer is being used determines where this script looks for the dummy scripts
 if WorkingComputer == 'Personal Computer':
