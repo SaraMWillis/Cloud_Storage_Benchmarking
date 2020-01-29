@@ -50,11 +50,6 @@ want to replace my commands with those specific to you.
 
 '''
 
-# The filexfer node only runs Python 2 which uses a few slightly different commands
-# from python3 which is what I use on my personal computer. Specifying the version
-# will ensure the correct commands are used. 
-python_version = '3'
-
 # Either 'Personal Computer' or 'HPC'
 host_machine= 'Personal Computer'
 
@@ -185,6 +180,10 @@ def Remove_file_from_dest(filename,local_filepath):
 #####################################################################################
 #                                 Program Executes                                  #
 #####################################################################################
+
+# Detects python version
+python_version = str(sys.version_info[0])
+
 
 # Generates the output filename for the user
 upload_naming_tuple = (host_machine.replace(' ',''),'GoogleDrive') if Direction == 'Upload' else ('GoogleDrive',host_machine.replace(' ',''))
